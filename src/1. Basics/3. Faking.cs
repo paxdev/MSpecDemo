@@ -4,7 +4,7 @@ using Machine.Specifications;
 
 namespace MSpecDemo._1._Basics
 {
-	[Subject(typeof(DiMessageSender))]
+	[Subject("Faking")]
     public class When_sending_a_message : WithFakes
 	{
 		// Inherit from WithFakes to automatically set up the Fake Engine

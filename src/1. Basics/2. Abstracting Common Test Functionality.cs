@@ -6,7 +6,7 @@ namespace MSpecDemo._1._Basics
     // MSpec will run all the Establishes in order up the inheritance chain from basest to subbest
     // You only need the Subject attribute on the highest ancestor
 	
-    [Subject(typeof(MessageSender))]
+    [Subject("Abstracting Common Test Functionality")]
     public abstract class MessageSenderContext
     {
         protected static MessageSender MessageSender;
@@ -31,7 +31,6 @@ namespace MSpecDemo._1._Basics
         It should_not_send_the_message = () => MessageWasSent.ShouldBeFalse();
     }
 
-    [Subject(typeof(MessageSender))]
     public class When_trying_to_send_a_message_with_some_text_2 : MessageSenderContext
     {
         Establish context = () => SetMessageToSend("My Message");

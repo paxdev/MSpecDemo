@@ -31,6 +31,8 @@ namespace MSpecDemo._1._Basics
         public static string LastMessageSent { get; set; }
     }
 
+    [Subject("Complex Object Setup")]
+
     public class When_using_something_complicated : WithSubject<DiMessageSender>
     {
         // Using the With<> syntax I can use this particular setup of this object

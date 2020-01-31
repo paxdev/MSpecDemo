@@ -5,6 +5,7 @@ using Machine.Specifications;
 
 namespace MSpecDemo._1._Basics
 {
+    [Subject("Testing for Exceptions")]
     public class When_calling_a_method_that_throws_an_exception : WithSubject<DiMessageSender>
     {
         static Exception caughtException;
