@@ -17,8 +17,13 @@ namespace MSpecDemo._1._Basics
         OnEstablish context = accessor =>
         {
             var transmitter = An<IMessageTransmitter>();
-            transmitter.WhenToldTo(t => t.Status).Return("It's complicated");
-            transmitter.WhenToldTo(t => t.Transmit(Param.IsAny<string>())).Callback((string message) => LastMessageSent = message);
+            transmitter
+                .WhenToldTo(t => t.Status)
+                .Return("It's complicated");
+            
+            transmitter
+                .WhenToldTo(t => t.Transmit(Param.IsAny<string>()))
+                .Callback((string message) => LastMessageSent = message);
 
             // tell the fake engine to always use this fake instance when an IMessageTransmitter is requested 
             accessor.Configure(transmitter);

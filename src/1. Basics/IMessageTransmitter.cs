@@ -9,7 +9,5 @@ namespace MSpecDemo._1._Basics
         string Status { get; }
 
         string LastMessageSent { get; set; }
-
-
     }
 }

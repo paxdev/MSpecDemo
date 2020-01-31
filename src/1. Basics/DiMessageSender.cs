@@ -9,9 +9,7 @@ namespace MSpecDemo._1._Basics
             this.messageTransmitter = messageTransmitter;
         }
 
-        public void SendMessage(string testMessage)
-        {
+        public void SendMessage(string testMessage) => 
             messageTransmitter.Transmit(testMessage);
-        }
     }
 }

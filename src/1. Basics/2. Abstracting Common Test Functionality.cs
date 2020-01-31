@@ -3,7 +3,7 @@
 namespace MSpecDemo._1._Basics
 {
     // A common pattern is to extract common test helper functions into base classes
-    // MSpec will run all the Establishes in order up the inheritance chain
+    // MSpec will run all the Establishes in order up the inheritance chain from basest to subbest
     // You only need the Subject attribute on the highest ancestor
 	
     [Subject(typeof(MessageSender))]
@@ -15,15 +15,11 @@ namespace MSpecDemo._1._Basics
 
         Establish context = () => MessageSender = new MessageSender();
 
-        protected static void SetMessageToSend(string message)
-        {
+        protected static void SetMessageToSend(string message) => 
             Message = message;
-        }
 
-        protected static bool SendMessage()
-        {
-          return MessageSender.Send(Message);
-        }
+        protected static bool SendMessage() => 
+            MessageSender.Send(Message);
     }
 
     public class When_trying_to_send_an_empty_message_2 : MessageSenderContext

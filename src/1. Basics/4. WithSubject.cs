@@ -1,5 +1,4 @@
-﻿using System;
-using Machine.Fakes;
+﻿using Machine.Fakes;
 using Machine.Specifications;
 
 namespace MSpecDemo._1._Basics
@@ -30,9 +29,7 @@ namespace MSpecDemo._1._Basics
 
         It should_send_the_message = () => sentMessage.ShouldEqual("Test Message");
 
-        static void SendMessageCallback(string message)
-        {
+        static void SendMessageCallback(string message) => 
             sentMessage = message;
-        }    
     }
 }
